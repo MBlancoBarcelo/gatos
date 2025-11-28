@@ -10,21 +10,18 @@ body{
 }
 
 .cat{
-    object-fit: cover;
-    display: flex;
+        object-fit: cover;
     height: 300px;
-
     width: 300px;
-    margin: 4px;
     border-radius: 12px;
 }
 
 #contenedor{
+    gap: 8px;
+    grid-template-columns: 300px 300px 300px;
     margin-top: 16px;
     width: 1000px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
     justify-content: center;
 }
 
@@ -34,18 +31,28 @@ body{
     #contenedor{
             width: 700px;
         justify-content: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;   
+    display: grid;
+    justify-items: center;
+    grid-template-columns: calc(50% - 32px) calc(50% - 32px);
+    grid-template-rows:auto;
     }
+
+    .cat{
+        width: 100%;
+    }
+
 }
 
 @media (max-width:600px){
       #contenedor{
-            width: 400px;
+        width: 500px;
         justify-content: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;   
+    display: grid;
+           grid-template-columns: calc(100% - 32px);
+    }
+
+    .cat{
+        width: 100%;
+        aspect-ratio: 1 / 1;
     }
 }
