@@ -10,14 +10,17 @@ body{
 }
 
 .cat{
+    object-fit: cover;
     display: flex;
     height: 300px;
+
     width: 300px;
-    margin: 8px;
+    margin: 4px;
     border-radius: 12px;
 }
 
 #contenedor{
+    margin-top: 16px;
     width: 1000px;
     display: flex;
     flex-direction: row;
